@@ -22,7 +22,7 @@ if st.button("Search"):
     else:
         with st.spinner("Please wait... Processing your query. This may take a few seconds."):
             try:
-                response = requests.get("http://localhost:8000/search", params={"query": query})
+                response = requests.get("https://chatbot-backend-e487.onrender.com", params={"query": query})
                 response.raise_for_status()
 
                 # Expecting backend to return {"response": "Your nice response here"}
